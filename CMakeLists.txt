@@ -1,6 +1,9 @@
 cmake_minimum_required(VERSION 3.6...3.14)
 project(libvis LANGUAGES C CXX)
 
+# https://github.com/ETH3D/badslam/issues/66
+project(libvis LANGUAGES C CXX CUDA)
+
 # Enable C++14 globally
 set(CMAKE_CXX_STANDARD 14)
 
@@ -155,7 +158,8 @@ if (TARGET Qt5::Core AND UNIX)
 endif()
 
 # OpenCV (external, required)
-find_package(OpenCV 3.1.0 REQUIRED)
+find_package(OpenCV REQUIRED)
+#find_package(OpenCV 3.1.0 REQUIRED)
 
 # Settings.
 if(CMAKE_COMPILER_IS_GNUCC OR CMAKE_COMPILER_IS_GNUXX)

@@ -672,7 +672,7 @@ void K4AInputThread::ThreadMain() {
 		  cv::Mat cv_ir_image_8;
 		  cv_ir_image.convertTo(cv_ir_image_8, CV_8U, 1.f / 4.f);
 		  remap(cv_ir_image_8, cv_undistorted_ir, map1, map2, cv::INTER_LINEAR, cv::BORDER_CONSTANT);
-		  cv::cvtColor(cv_undistorted_ir, cv_undistorted_color, CV_GRAY2RGB);
+		  cv::cvtColor(cv_undistorted_ir, cv_undistorted_color, cv::COLOR_GRAY2RGB);
 	  }
     
     // Add the frame to the queue

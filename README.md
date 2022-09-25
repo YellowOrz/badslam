@@ -1,3 +1,12 @@
+- Note:
+  - the dataset includes a `rgb` folder, a `depth` folder, a `calibration.txt` and a `associated.txt`
+  - run `generate_associated.py` to get `associated.txt`
+  - include [DLib](https://github.com/dorian3d/DLib) which is modified to support OpenCV4.x in TODO
+  - if get the error "/usr/bin/ld: cannot find -lcublas", run command `export LIBRARY_PATH=/usr/local/cuda/targets/x86_64-linux/lib:${LIBRARY_PATH}`
+  - install `libqt5x11extras5-dev` 
+----
+origin README
+
 # BAD SLAM #
 
 ## Overview ##
